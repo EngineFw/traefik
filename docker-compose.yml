@@ -25,7 +25,7 @@ services:
       - "traefik.enable=true"
       # Add your own domain to access traefik control panel
       - "traefik.http.routers.dashboard.rule=Host(`${access}`)"
-      - "traefik.http.routers.dashboard.service=${api}"
+      - "traefik.http.routers.dashboard.service=@api"
     ports:
       - "80:80"
       - "443:443"
